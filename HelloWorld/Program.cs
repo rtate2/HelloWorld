@@ -7,7 +7,7 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("Howdy Y'all!!");
-            Console.ReadKey();
+            Console.ReadKey(); 
 
             var animals = new string[] { "Triceratops", "Gorilla", "Corgi", "Toucan" };
             
