@@ -10,28 +10,30 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            if (args.Length == 0)
+            Console.WriteLine("Which dialect would you like?");
+            foreach (string arg in args)
             {
-                System.Console.WriteLine("Please enter parameter values.", "Canadian English", "North American English", "Australian English");
-                Console.Read();
+                Console.WriteLine(arg);
             }
-            else
+            var answer = Console.ReadLine().ToLower().Trim();
+
+            switch (answer)
             {
-                for (int i = 0; i < args.Length; i++)
-                {
-                    Console.Write(args[i] + Environment.NewLine);
-                }
-                Console.Read();
+                case "south african":
+                    Console.WriteLine("Hallo!");
+                    break;
+                case "west african":
+                    Console.WriteLine("Aweh!");
+                    break;
+                default:
+                    Console.WriteLine("Howdy, y'all!");
+                    break;
             }
 
-            Console.WriteLine("Howdy Y'all!!");
-            Console.ReadKey();
+            Console.WriteLine("Please enter your full name");
+            var name = Console.ReadLine();
+            Console.WriteLine($"Hello {name}, thanks for using this app.");
 
-            var a = 10;
-            var b = 3;
-
-            Console.WriteLine(a > b);
-            
             var animals = new string[] { "Triceratops", "Gorilla", "Corgi", "Toucan", "Bird" };
             
             var vowels = new[] { 'a', 'e', 'i', 'o', 'u', 'y' };
@@ -51,9 +53,16 @@ namespace HelloWorld
                 if (numberOfVowels >= 2)
                 {
                     Console.WriteLine(animal);
-                    Console.ReadKey();
+                    //Console.ReadKey();
                 }
             }
+
+            var random = new Random();
+            var randomAnimal = random.Next(0, animals.Length);
+
+            Console.WriteLine("Please enter your favorite color.");
+            var faveColor = Console.ReadLine();
+            Console.WriteLine($"Would you like to have a {faveColor.ToLower()} {animals[randomAnimal].ToLower()}?");
         }
     }
 }
