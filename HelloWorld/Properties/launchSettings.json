@@ -2,7 +2,7 @@
   "profiles": {
     "HelloWorld": {
       "commandName": "Project",
-      "commandLineArgs": "\"North American English\" \"Australian English\" \"Canadian English\""
+      "commandLineArgs": "\"South African\" \"West African\" \"Southern English\""
     }
   }
 }
